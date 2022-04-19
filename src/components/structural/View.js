@@ -45,7 +45,7 @@ class View extends Component {
                 e.preventDefault();
             }
         }, false);
-
+        /*
         window.addEventListener("enter-vr", () => {
             document.getElementById("interface").style.visibility = "hidden";
         });
@@ -53,6 +53,7 @@ class View extends Component {
         window.addEventListener("exit-vr", () => {
             document.getElementById("interface").style.visibility = "visible";
         });
+        */
     }
     
     /**

@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import Ide from "./containers/Ide";
+import Canvas from "./containers/Canvas";
 import Guided from "./containers/Guided";
 import Collection from "./containers/Collection";
 import Reference from "./containers/Reference";
@@ -21,6 +22,7 @@ const router = () => {
                 <Route path='/course/:shortname' component={Guided} />
                 <Route path='/collection/:collection' component={Collection} />
                 <Route path='/reference/:function' component={ReferenceExample} />
+                <Route path='/canvas' component={Canvas} />
                 <Route
                     path="/class/:className"
                     render={({ match }) => {

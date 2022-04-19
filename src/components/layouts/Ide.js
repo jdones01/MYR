@@ -2,7 +2,6 @@ import React from "react";
 import Editor from "../editor/Editor";
 import Header from "../structural/header/Header";
 import Footer from "../structural/Footer";
-import View from "../structural/View";
 import Banner from "../structural/header/Banner";
 
 import * as layoutTypes from "../../constants/LayoutTypes.js";
@@ -45,17 +44,15 @@ export const Ide = ({ editor, editorActions, user, usersettings, userActions, au
             {
                 scene.settings.viewOnly
                     ?
-                    <div id="scene" className="col-12" >
-                        <View objects={editor.objects} sceneConfig={scene} assets={editor.assets} />
-                    </div>
+                    <iframe src="/canvas"></iframe>
                     :
                     <>
                         <div id="interface" className="col-12 col-md-4" >
                             <Editor refresh={editorActions.refresh} render={editorActions.render} text={editor.text} user={user} settings={usersettings} savedText={editor.savedText} userActions={userActions} />
                         </div>
-                        <div id="scene" className="col-12 col-md-8" >
-                            <View objects={editor.objects} sceneConfig={scene} assets={editor.assets} />
-                        </div>
+                        <div id="canvas" className="col-12 col-md-8">
+                            <iframe frameBorder={0} src="/canvas"></iframe>
+                        </div>    
                     </>
             }
         </div>

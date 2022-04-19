@@ -118,6 +118,11 @@ body.aframe-inspector-opened .toggle-edit {
     border-right: 0;
 }
 
+#canvas iframe {
+    width:100%;
+    height:95.5vh;
+}
+
 .spinner {
     position: fixed;
     z-index: 999;
