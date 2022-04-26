@@ -363,9 +363,9 @@ class Header extends Component {
     handleRender = () => {
         try {
             let editor = window.ace.edit("ace-editor");
-            this.props.actions.render(editor.getSession().getValue(), this.props.user ? this.props.user.uid : "anon");
+            this.socket.emit("update", editor.getSession().getValue());
         } catch (error) {
-            this.props.actions.render(this.props.text, this.props.user ? this.props.user.uid : "anon");
+            this.socket.emit("update", this.props.text);
         }
     }
 

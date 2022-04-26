@@ -5,6 +5,7 @@ import "three-pathfinding/dist/three-pathfinding";
 import "aframe-extras/dist/aframe-extras.min.js";
 import "@engaging-computing/aframe-physics-system";
 import "aframe-environment-component";
+import sockets from "socket.io-client";
 
 /**
  * The View component return the aframe representation of the scene. This
@@ -15,9 +16,15 @@ class View extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            welcomeOpen: true
+            welcomeOpen: true,
+            socket : sockets(),
         };
+
+        this.state.socket.on("update", this.onCodeRecieved);
     }
+
+    onCodeRecieved = (code)=>{console.log(code);};
+
     /**
      * The timer ID set to check if the welcome screen is open
      * It will use it to cancel the timer once the welcome screen is close
