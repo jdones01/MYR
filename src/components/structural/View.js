@@ -20,7 +20,7 @@ class View extends Component {
             socket : sockets(),
         };
 
-        this.state.socket.on("update", this.onCodeRecieved);
+        this.state.socket.on("render", this.onCodeRecieved);
     }
 
     onCodeRecieved = (code)=>{console.log(code);};
