@@ -9,13 +9,8 @@ The Engaging Computing Group develops new technologies to enable learners—yout
 ## Status
 [![CircleCI](https://circleci.com/gh/engaging-computing/MYR.svg?style=shield)](https://circleci.com/gh/engaging-computing/MYR)
 
-## Change Log - 3.0.0 -> 3.1.0
-- Updated sorting for user projects to be case insensitive.
-- Added ability to change code font size for an account.
-- Added transparency to helper grid
-- Additional Documentation for development.
-- Misc. Dependency updates
-
+## Change Log - 3.1.1 -> 3.1.2
+- Fixed a bug where an old scene without a name can crash the client view
 
 
 ## Acknowledgments
